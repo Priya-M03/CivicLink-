@@ -1,0 +1,286 @@
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1a1a1a;
+}
+
+.app {
+  width: 100%;
+}
+
+/* ===== ACCESSIBILITY HEADER ===== */
+.top-header {
+  background: #0b3d91;
+  color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-left span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.top-links a {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #ffffff;
+  padding: 14px 30px;
+  display: flex;
+  gap: 22px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #0b3d91;
+  font-weight: 600;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #0b3d91;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 70px 20px;
+  text-align: center;
+  background: #e9f0fb;
+}
+
+.hero h1 {
+  color: #0b3d91;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.hero button {
+  padding: 14px 34px;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero .primary {
+  background: #0b3d91;
+  color: white;
+}
+
+.hero .primary:hover {
+  background: #062b6f;
+  transform: translateY(-2px);
+}
+
+.hero .secondary {
+  background: #ffffff;
+  color: #0b3d91;
+  border: 1px solid #0b3d91;
+}
+
+.hero .secondary:hover {
+  background: #f1f5ff;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 30px;
+  background: #ffffff;
+}
+
+.stat {
+  background: #f9fbff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e6f2;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.stat h3 {
+  color: #0b3d91;
+  margin-bottom: 5px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  padding: 50px 30px;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+  border-left: 5px solid #0b3d91;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* ===== WORKFLOW ===== */
+.workflow {
+  background: #eef3fb;
+  padding: 50px 30px;
+}
+
+.workflow h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.step span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #0b3d91;
+  color: white;
+  border-radius: 50%;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+  padding: 50px 30px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.dashboard-cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.dash-card {
+  background: #f9fbff;
+  padding: 30px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.dash-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+/* ===== NEWS ===== */
+.news {
+  padding: 50px 30px;
+  background: #eef3fb;
+}
+
+.news h2 {
+  text-align: center;
+}
+
+.news ul {
+  max-width: 600px;
+  margin: 20px auto 0;
+}
+
+.news li {
+  margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+}
