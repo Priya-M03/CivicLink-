@@ -284,3 +284,10 @@ body {
   padding: 20px;
   font-size: 13px;
 }
+
+/* Accessibility improvement: visible keyboard focus */
+.navbar a:focus-visible,
+.hero button:focus-visible {
+  outline: 2px solid #f0ad25;
+  outline-offset: 4px;
+}
